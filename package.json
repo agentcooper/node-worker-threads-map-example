@@ -1,0 +1,11 @@
+{
+  "name": "node-worker-threads-map-example",
+  "description": "Example of mapping an array using workers.",
+  "author": "Artem Tyurin <artem.tyurin@gmail.com>",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
