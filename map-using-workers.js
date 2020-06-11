@@ -1,9 +1,18 @@
+// @ts-check
+
 const os = require("os");
 const { Worker } = require("worker_threads");
 const { range } = require("./shared");
 
 const cpuCount = os.cpus().length;
 
+/**
+ * @template T
+ * @template U
+ * @param {T[]} inputArray
+ * @param {string} workerFilename
+ * @returns {Promise<U[]>}
+ */
 async function mapUsingWorkers(inputArray, workerFilename) {
   const outputArray = new Array(inputArray.length);
   const chunkSize = Math.floor(inputArray.length / cpuCount);

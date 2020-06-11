@@ -1,3 +1,5 @@
+// @ts-check
+
 const path = require("path");
 const { isMainThread } = require("worker_threads");
 

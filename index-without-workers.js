@@ -1,3 +1,5 @@
+// @ts-check
+
 const { cpuHeavyFunction, getData, parseNumber } = require("./shared");
 
 async function main() {

@@ -1,3 +1,5 @@
+// @ts-check
+
 const { isMainThread, parentPort, workerData } = require("worker_threads");
 
 const { cpuHeavyFunction } = require("./shared");
@@ -5,6 +7,9 @@ const { cpuHeavyFunction } = require("./shared");
 async function worker() {
   const chunk = [];
 
+  /**
+   * @param {number} index
+   */
   async function compute(index) {
     if (index > workerData.endIndex) {
       parentPort.postMessage({
